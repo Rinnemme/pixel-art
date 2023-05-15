@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pixel Art</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img ID="header-image" src ="header.svg">
+    <div ID="button-container">
+        <div>Grid size</div>
+        <div id="grid-settings">
+            <div id="grid-dimensions">20</div>
+            <div id="grid-adjustment">
+                <div class="grid-change" onclick="dimensionUp()">▲</div>
+                <div class="grid-change" onclick="dimensionDown()">▼</div>
+            </div>
+        </div>
+        <button onclick="setDimensions()" ID="set-dimensions">Refresh</button>
+        <button onclick="clearGrid()" ID="clear-button">Clear Canvas</button>
+        <div>
+          <input id="color-picker" type="color">
+        </div>
+    </div>
+    <div ID="grid-container">
+        <div ID="grid">
+            <div ID="welcome-text">
+            <b>Welcome to etch-a-sketch!</b><br> This works just like a traditional etch-a-sketch
+            in that you will be drawing continously the moment your mouse enters the
+            drawing area. <br><br>Please click the 'Set Grid Dimensions' button above to select the 
+            dimensions you'd like to work with, up to 100 x 100.<br><br><i>For example, entering '50' would
+            generate a grid that is 50 x 50 pixels in dimension.</i>
+            </div>
+        </div>
+    </div>
+    <script>
+        const gridContainer = document.getElementById("grid-container")
+        
+
+        function setDimensions() {
+            const grid = document.getElementById("grid")
+            const dimension = +prompt("How wide would you like the grid to be?")
+            if (dimension===0) {return}
+            if (!Number.isInteger(dimension) || dimension>100 || dimension<1) {
+                alert("Please select a number between 1 and 100")
+                return
+            }
+            grid.remove()
+            const newGrid = document.createElement('div')
+            newGrid.setAttribute('id','grid')
+            gridContainer.appendChild(newGrid)
+            const width = (1/dimension*100)
+            for (let i=1;i<=dimension*dimension;i++) {
+                const newCell = document.createElement('div')
+                newCell.classList.add("cell")
+                newCell.style.width= width + "%"
+                newCell.style.height= width + "%"
+                newCell.addEventListener("mouseenter", setBlack)
+                newGrid.appendChild(newCell)
+            }
+        }
+
+        function clearGrid() {
+            const cells = document.querySelectorAll('.cell')
+            cells.forEach(cell => {
+                cell.style.backgroundColor = 'white'
+            })
+        }
+
+        function dimensionUp() {
+
+        }
+
+        function dimensionDown() {
+
+        }
+    </script>
+</body>
+</html>
