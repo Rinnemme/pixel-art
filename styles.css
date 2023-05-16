@@ -73,9 +73,9 @@ body {
 }
 
 .cell {
+    box-sizing:border-box;
     background-color: white;
-    border:2px solid #EEEEEE;
-    margin:-2px;
+    border: 1px solid #efefef;
 }
 
 .cell:hover {
