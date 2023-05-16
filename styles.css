@@ -65,6 +65,8 @@ body {
 
 .cell {
     background-color: white;
+    border:1px solid #EEEEEE;
+    margin:-1px;
 }
 
 #header-image {
@@ -128,4 +130,8 @@ body {
     min-width: 400px;
     padding-top:5%;
     padding-bottom:5%;
+}
+
+#button-container {
+    display:none;
 }

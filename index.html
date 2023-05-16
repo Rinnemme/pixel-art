@@ -35,7 +35,7 @@
                 you'd like the canvas to be.<br><br><i>Click the button
                 below to get started!</i>
                 <br>
-                <button id="start-button">Start</button>
+                <button onclick="openUI()" id="start-button">Start</button>
                 </div>
             </div>
         </div>
@@ -43,6 +43,7 @@
     <script>
         const gridContainer = document.getElementById("grid-container")
         const dimensionBox = document.getElementById("grid-dimensions")
+        const artUI = document.getElementById("button-container")
         let dimension = 20
 
         function refreshGrid() {
@@ -66,6 +67,11 @@
             cells.forEach(cell => {
                 cell.style.backgroundColor = 'white'
             })
+        }
+
+        function openUI() {
+            artUI.style.display="flex"
+            refreshGrid()
         }
 
         function dimensionUp() {
