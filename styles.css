@@ -12,21 +12,32 @@ body {
 
 #set-dimensions,
 #clear-button,
-#start-button {
+#start-button,
+#toggle-button,
+#download-button {
     color:white;
     background-color:#333333;
-    font-size:16px;
+    font-size:14px;
     border-radius:5px;
     border:1px solid white;
 }
 
 #set-dimensions,
-#clear-button {
+#clear-button,
+#toggle-button,
+#download-button {
     padding:5px 10px 5px 10px;
 }
 
 #start-button {
+    font-size:16px;
     padding:8px 15px 8px 15px;
+}
+
+#download-button {
+    margin-top:30px;
+    margin-bottom:30px;
+    visibility:hidden;
 }
 
 #set-dimensions:hover
@@ -43,6 +54,16 @@ body {
 
 #start-button:hover {
     background-color: #AD64FF;
+    cursor:pointer;
+}
+
+#toggle-button:hover {
+    background-color: #FC64FF;
+    cursor:pointer;
+}
+
+#download-button:hover {
+    background-color: #FFAA64;
     cursor:pointer;
 }
 
@@ -95,6 +116,7 @@ body {
 
 #header-image {
     width:65vh;
+    margin-top:30px;
     max-width:650px;
     min-width:325px;
 }
@@ -159,4 +181,8 @@ body {
     width:80vh;
     max-width:800px;
     min-width:400px;
+}
+
+.no-grid {
+    border:none;
 }

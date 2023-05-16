@@ -23,6 +23,7 @@
         </div>
         <button onclick="refreshGrid()" id="set-dimensions">Set</button>
         <button onclick="clearGrid()" id="clear-button">Clear</button>
+        <button onclick="toggleGrid()" id="toggle-button">Toggle Grid</button>
     </div>
     <div id="grid-container">
         <div id="grid">
@@ -30,12 +31,15 @@
             <b>Ready to make some pixel art?</b><br>
             You can use the color selector to pick a color, and then 
             click each pixel individually to fill it in.<br><br>You can also readjust 
-            the grid's width up to a maximum of 50 pixels.<br>
+            the grid's width up to a maximum of 50 pixels, and toggle the grid lines
+            on and off to view your work clearly.<br>
             <br>
             <button onclick="openUI()" id="start-button">Get started!</button>
             </div>
         </div>
     </div>
+    <button ID="download-button">Download</button>
+    
     <script src="scripts.js"></script>
 </body>
 </html>

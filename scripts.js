@@ -2,6 +2,7 @@ const gridContainer = document.getElementById("grid-container")
 const dimensionBox = document.getElementById("grid-dimensions")
 const artUI = document.getElementById("button-container")
 const colorPicker = document.getElementById("color-picker")
+const download = document.getElementById("download-button")
 let dimension = 10
 
 function refreshGrid() {
@@ -34,6 +35,7 @@ function clearGrid() {
 
 function openUI() {
     artUI.style.display = "flex"
+    download.style.visibility = "visible"
     refreshGrid()
 }
 
@@ -47,4 +49,11 @@ function dimensionDown() {
     if (dimension===1) {return}
     dimension=dimension-1
     dimensionBox.textContent=dimension
+}
+
+function toggleGrid() {
+    const cells = document.querySelectorAll('.cell')
+    cells.forEach(cell => {
+        cell.classList.toggle('no-grid')
+    })
 }
