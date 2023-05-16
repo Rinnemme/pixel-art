@@ -46,8 +46,8 @@ body {
     height:65vh;
     max-width:650px;
     max-height:650px;
-    min-width:350px;
-    min-height:350px;
+    min-width:325px;
+    min-height:325px;
 }
 
 #grid {
@@ -148,8 +148,6 @@ body {
     width:80vh;
     max-width:800px;
     min-width:400px;
-    padding-top:5%;
-    padding-bottom:5%;
 }
 
 #button-container {
