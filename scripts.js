@@ -5,6 +5,11 @@ const colorPicker = document.getElementById("color-picker")
 const download = document.getElementById("download-button")
 let dimension = 10
 
+function openUI() {
+    artUI.style.display = "flex"
+    refreshGrid()
+}
+
 function refreshGrid() {
     const grid = document.getElementById("grid")
     grid.remove()
@@ -22,22 +27,6 @@ function refreshGrid() {
     }
 }
 
-function setColor() {
-    this.style.backgroundColor=`${colorPicker.value}`
-}
-
-function clearGrid() {
-    const cells = document.querySelectorAll('.cell')
-    cells.forEach(cell => {
-        cell.style.backgroundColor = 'white'
-    })
-}
-
-function openUI() {
-    artUI.style.display = "flex"
-    refreshGrid()
-}
-
 function dimensionUp() {
     if (dimension===50) {return}
     dimension=dimension+1
@@ -50,9 +39,20 @@ function dimensionDown() {
     dimensionBox.textContent=dimension
 }
 
+function clearGrid() {
+    const cells = document.querySelectorAll('.cell')
+    cells.forEach(cell => {
+        cell.style.backgroundColor = 'white'
+    })
+}
+
 function toggleGrid() {
     const cells = document.querySelectorAll('.cell')
     cells.forEach(cell => {
         cell.classList.toggle('no-grid')
     })
+}
+
+function setColor() {
+    this.style.backgroundColor=`${colorPicker.value}`
 }

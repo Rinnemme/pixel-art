@@ -10,6 +10,96 @@ body {
     font-family:sans-serif;
 }
 
+/* Header */
+
+#header-image {
+    width:65vh;
+    margin-top:30px;
+    max-width:650px;
+    min-width:325px;
+}
+
+/* Welcome message */
+
+#welcome-text {
+    display:flex;
+    align-self:flex-start;
+    margin-top:80px;
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    font-size: 16px;
+    width:60%;
+    max-width:275px;
+    padding:30px;
+    background-color:rgb(255, 255, 255);
+    box-shadow:3px 3px 3px black;
+    border-radius:5px;
+}
+
+#start-button {
+    font-size:16px;
+    padding:8px 15px 8px 15px;
+}
+
+#start-button:hover {
+    background-color: #AD64FF;
+    cursor:pointer;
+}
+
+/* Art UI */
+
+#button-container {
+    display:flex; 
+    flex-direction:row; 
+    gap:10px; 
+    margin-bottom:30px;
+    margin-top:30px;
+    align-items:center;
+    justify-content:center;
+    display:none;
+}
+
+#color-picker {
+    width: 30px;
+    height: 30px;
+    border-radius:3px;
+}
+
+#color-picker:hover {
+    cursor:pointer;
+}
+
+#grid-settings {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    height:50%;
+    gap:10px;
+    color:white;
+}
+
+#grid-dimensions {
+    border:1px solid white;
+    padding:5px;
+    font-size:14px;
+    border-radius:3px;
+    background-color:black;
+    width:20px;
+    text-align:center;
+}
+
+.grid-arrow {
+    color:white;
+    height:50%;
+    font-size:10px;
+}
+
+.grid-arrow:hover {
+    cursor:pointer;
+    color: pink;
+}
+
 #set-dimensions,
 #clear-button,
 #start-button,
@@ -29,17 +119,6 @@ body {
     padding:5px 10px 5px 10px;
 }
 
-#start-button {
-    font-size:16px;
-    padding:8px 15px 8px 15px;
-}
-
-#download-button {
-    margin-top:30px;
-    margin-bottom:30px;
-    visibility:hidden;
-}
-
 #set-dimensions:hover
 {
     background-color: #6494FF;
@@ -52,20 +131,25 @@ body {
     cursor:pointer;
 }
 
-#start-button:hover {
-    background-color: #AD64FF;
-    cursor:pointer;
-}
-
 #toggle-button:hover {
     background-color: #FC64FF;
     cursor:pointer;
+}
+
+/* Download (Don't know how to do this yet) */
+
+#download-button {
+    margin-top:30px;
+    margin-bottom:30px;
+    visibility:hidden;
 }
 
 #download-button:hover {
     background-color: #FFAA64;
     cursor:pointer;
 }
+
+/* Grid */
 
 #grid-container {
     display:flex;
@@ -88,22 +172,6 @@ body {
     background-color:#111111;
 }
 
-#welcome-text {
-    display:flex;
-    align-self:flex-start;
-    margin-top:80px;
-    flex-direction:column;
-    text-align:center;
-    align-items:center;
-    font-size: 16px;
-    width:60%;
-    max-width:275px;
-    padding:30px;
-    background-color:rgb(255, 255, 255);
-    box-shadow:3px 3px 3px black;
-    border-radius:5px;
-}
-
 .cell {
     box-sizing:border-box;
     background-color: white;
@@ -112,76 +180,6 @@ body {
 
 .cell:hover {
     cursor:crosshair;
-}
-
-#header-image {
-    width:65vh;
-    margin-top:30px;
-    max-width:650px;
-    min-width:325px;
-}
-
-#color-picker {
-    width: 30px;
-    height: 30px;
-    border-radius:3px;
-}
-
-#color-picker:hover {
-    cursor:pointer;
-}
-
-.grid-arrow:hover {
-    cursor:pointer;
-    color: pink;
-}
-
-#grid-settings {
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    height:50%;
-    gap:10px;
-    color:white;
-}
-
-.grid-arrow {
-    color:white;
-    height:50%;
-    font-size:10px;
-}
-
-#grid-dimensions {
-    border:1px solid white;
-    padding:5px;
-    font-size:14px;
-    border-radius:3px;
-    background-color:black;
-    width:20px;
-    text-align:center;
-}
-
-#button-container {
-    display:flex; 
-    flex-direction:row; 
-    gap:10px; 
-    margin-bottom:30px;
-    margin-top:30px;
-    align-items:center;
-    justify-content:center;
-    display:none;
-}
-
-#content-container {
-    background-color:#111111;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    width:80vh;
-    max-width:800px;
-    min-width:400px;
 }
 
 .no-grid {
