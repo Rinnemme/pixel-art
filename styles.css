@@ -13,12 +13,20 @@ body {
 #set-dimensions,
 #clear-button,
 #start-button {
-    padding:5px 10px 5px 10px;
     color:white;
     background-color:#333333;
     font-size:16px;
     border-radius:5px;
     border:1px solid white;
+}
+
+#set-dimensions,
+#clear-button {
+    padding:5px 10px 5px 10px;
+}
+
+#start-button {
+    padding:8px 15px 8px 15px;
 }
 
 #set-dimensions:hover
