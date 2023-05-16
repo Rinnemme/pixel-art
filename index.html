@@ -42,6 +42,7 @@
         const gridContainer = document.getElementById("grid-container")
         const dimensionBox = document.getElementById("grid-dimensions")
         const artUI = document.getElementById("button-container")
+        const colorPicker = document.getElementById("color-picker")
         let dimension = 10
 
         function refreshGrid() {
@@ -56,8 +57,13 @@
                 newCell.classList.add("cell")
                 newCell.style.width= width + "%"
                 newCell.style.height= width + "%"
+                newCell.addEventListener("click", setColor)
                 newGrid.appendChild(newCell)
             }
+        }
+
+        function setColor() {
+            this.style.backgroundColor=`${colorPicker.value}`
         }
 
         function clearGrid() {
