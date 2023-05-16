@@ -74,8 +74,8 @@ body {
 
 .cell {
     background-color: white;
-    border:1px solid #EEEEEE;
-    margin:-1px;
+    border:2px solid #EEEEEE;
+    margin:-2px;
 }
 
 .cell:hover {
