@@ -12,7 +12,8 @@ body {
 }
 
 #set-dimensions,
-#clear-button {
+#clear-button,
+#start-button {
     padding:5px 10px 5px 10px;
     color:white;
     background-color:black;
@@ -22,7 +23,8 @@ body {
 }
 
 #set-dimensions:hover,
-#clear-button:hover {
+#clear-button:hover,
+#start-button:hover {
     background-color: #424242;
     cursor:pointer;
 }
@@ -55,7 +57,7 @@ body {
     text-align:center;
     align-items:center;
     font-size: 16px;
-    width:300px;
+    width:60%;
     padding:20px;
     background-color:rgb(255, 255, 255);
     box-shadow:3px 3px 3px black;
