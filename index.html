@@ -10,9 +10,13 @@
     <div ID="content-container">
         <img ID="header-image" src ="header.svg">
         <div ID="button-container">
+            <div style="color:white">Color:</div>
+            <div>
+                <input id="color-picker" type="color">
+            </div>
             <div style="color:white">Grid size:</div>
             <div id="grid-settings">
-                <div id="grid-dimensions">20</div>
+                <div id="grid-dimensions">10</div>
                 <div id="grid-adjustment">
                     <div class="grid-arrow" onclick="dimensionUp()">▲</div>
                     <div class="grid-arrow" onclick="dimensionDown()">▼</div>
@@ -20,22 +24,16 @@
             </div>
             <button onclick="refreshGrid()" ID="set-dimensions">Set</button>
             <button onclick="clearGrid()" ID="clear-button">Clear</button>
-            <div style="color:white">Color:</div>
-            <div>
-                <input id="color-picker" type="color">
-            </div>
         </div>
         <div ID="grid-container">
             <div ID="grid">
                 <div ID="welcome-text">
-                <b>Ready to make some pixel art?</b><br>It's simple! 
+                <b>Ready to make some pixel art?</b><br>
                 You can use the color selector to pick a color, and then 
-                just click anywhere to draw!<br><br>You can also use the
-                arrows next to Grid Size to readjust how many pixels wide 
-                you'd like the canvas to be.<br><br><i>Click the button
-                below to get started!</i>
+                click each pixel individually to fill it in.<br><br>You can also readjust 
+                the grid's width up to a maximum of 50 pixels.<br>
                 <br>
-                <button onclick="openUI()" id="start-button">Start</button>
+                <button onclick="openUI()" id="start-button">Get started!</button>
                 </div>
             </div>
         </div>
@@ -44,7 +42,7 @@
         const gridContainer = document.getElementById("grid-container")
         const dimensionBox = document.getElementById("grid-dimensions")
         const artUI = document.getElementById("button-container")
-        let dimension = 20
+        let dimension = 10
 
         function refreshGrid() {
             const grid = document.getElementById("grid")
