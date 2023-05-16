@@ -79,6 +79,10 @@ body {
     margin:-1px;
 }
 
+.cell:hover {
+    cursor:crosshair;
+}
+
 #header-image {
     width:65vh;
     max-width:650px;
@@ -89,6 +93,10 @@ body {
     width: 30px;
     height: 30px;
     border-radius:2px;
+}
+
+#color-picker:hover {
+    cursor:pointer;
 }
 
 .grid-arrow:hover {
