@@ -35,7 +35,6 @@ function clearGrid() {
 
 function openUI() {
     artUI.style.display = "flex"
-    download.style.visibility = "visible"
     refreshGrid()
 }
 
