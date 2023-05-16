@@ -7,30 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img ID="header-image" src ="header.svg">
-    <div ID="button-container">
-        <div>Grid size:</div>
-        <div id="grid-settings">
-            <div id="grid-dimensions">20</div>
-            <div id="grid-adjustment">
-                <div class="grid-change" onclick="dimensionUp()">▲</div>
-                <div class="grid-change" onclick="dimensionDown()">▼</div>
+    <div ID="content-container">
+        <img ID="header-image" src ="header.svg">
+        <div ID="button-container">
+            <div style="color:white">Grid size:</div>
+            <div id="grid-settings">
+                <div id="grid-dimensions">20</div>
+                <div id="grid-adjustment">
+                    <div class="grid-arrow" onclick="dimensionUp()">▲</div>
+                    <div class="grid-arrow" onclick="dimensionDown()">▼</div>
+                </div>
+            </div>
+            <button onclick="refreshGrid()" ID="set-dimensions">Set</button>
+            <button onclick="clearGrid()" ID="clear-button">Clear</button>
+            <div style="color:white">Color:</div>
+            <div>
+                <input id="color-picker" type="color">
             </div>
         </div>
-        <button onclick="refreshGrid()" ID="set-dimensions">Refresh</button>
-        <button onclick="clearGrid()" ID="clear-button">Clear</button>
-        <div>
-          <input id="color-picker" type="color">
-        </div>
-    </div>
-    <div ID="grid-container">
-        <div ID="grid">
-            <div ID="welcome-text">
-            <b>Welcome to etch-a-sketch!</b><br> This works just like a traditional etch-a-sketch
-            in that you will be drawing continously the moment your mouse enters the
-            drawing area. <br><br>Please click the 'Set Grid Dimensions' button above to select the 
-            dimensions you'd like to work with, up to 100 x 100.<br><br><i>For example, entering '50' would
-            generate a grid that is 50 x 50 pixels in dimension.</i>
+        <div ID="grid-container">
+            <div ID="grid">
+                <div ID="welcome-text">
+                <b>Welcome to etch-a-sketch!</b><br> This works just like a traditional etch-a-sketch
+                in that you will be drawing continously the moment your mouse enters the
+                drawing area. <br><br>Please click the 'Set Grid Dimensions' button above to select the 
+                dimensions you'd like to work with, up to 100 x 100.<br><br><i>For example, entering '50' would
+                generate a grid that is 50 x 50 pixels in dimension.</i>
+                </div>
             </div>
         </div>
     </div>
