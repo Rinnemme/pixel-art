@@ -73,11 +73,15 @@
         }
 
         function dimensionUp() {
-
+            if (dimension===50) {return}
+            dimension=dimension+1
+            dimensionBox.textContent=dimension
         }
 
         function dimensionDown() {
-
+            if (dimension===1) {return}
+            dimension=dimension-1
+            dimensionBox.textContent=dimension
         }
     </script>
 </body>
