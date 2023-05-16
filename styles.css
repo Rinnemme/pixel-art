@@ -6,8 +6,7 @@ body {
     align-items:center;
     justify-content: center;
     margin:0;
-    background-image: url("background-image.jpeg");
-    background-size:cover;
+    background-color:#111111;
     font-family:sans-serif;
 }
 
@@ -136,6 +135,7 @@ body {
     margin-top:30px;
     align-items:center;
     justify-content:center;
+    display:none;
 }
 
 #content-container {
@@ -148,8 +148,4 @@ body {
     width:80vh;
     max-width:800px;
     min-width:400px;
-}
-
-#button-container {
-    display:none;
 }

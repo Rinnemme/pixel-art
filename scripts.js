@@ -33,7 +33,7 @@ function clearGrid() {
 }
 
 function openUI() {
-    artUI.style.display="flex"
+    artUI.style.display = "flex"
     refreshGrid()
 }
 
