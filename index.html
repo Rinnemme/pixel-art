@@ -9,7 +9,7 @@
 <body>
     <img ID="header-image" src ="header.svg">
     <div ID="button-container">
-        <div>Grid size</div>
+        <div>Grid size:</div>
         <div id="grid-settings">
             <div id="grid-dimensions">20</div>
             <div id="grid-adjustment">
@@ -17,8 +17,8 @@
                 <div class="grid-change" onclick="dimensionDown()">▼</div>
             </div>
         </div>
-        <button onclick="setDimensions()" ID="set-dimensions">Refresh</button>
-        <button onclick="clearGrid()" ID="clear-button">Clear Canvas</button>
+        <button onclick="refreshGrid()" ID="set-dimensions">Refresh</button>
+        <button onclick="clearGrid()" ID="clear-button">Clear</button>
         <div>
           <input id="color-picker" type="color">
         </div>
@@ -36,16 +36,11 @@
     </div>
     <script>
         const gridContainer = document.getElementById("grid-container")
-        
+        const dimensionBox = document.getElementById("grid-dimensions")
+        let dimension = 20
 
-        function setDimensions() {
+        function refreshGrid() {
             const grid = document.getElementById("grid")
-            const dimension = +prompt("How wide would you like the grid to be?")
-            if (dimension===0) {return}
-            if (!Number.isInteger(dimension) || dimension>100 || dimension<1) {
-                alert("Please select a number between 1 and 100")
-                return
-            }
             grid.remove()
             const newGrid = document.createElement('div')
             newGrid.setAttribute('id','grid')
