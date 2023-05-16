@@ -16,16 +16,26 @@ body {
 #start-button {
     padding:5px 10px 5px 10px;
     color:white;
-    background-color:black;
+    background-color:#333333;
     font-size:16px;
     border-radius:5px;
     border:1px solid white;
 }
 
-#set-dimensions:hover,
-#clear-button:hover,
+#set-dimensions:hover
+{
+    background-color: #6494FF;
+    cursor:pointer;
+}
+
+#clear-button:hover
+{
+    background-color: #FF6464;
+    cursor:pointer;
+}
+
 #start-button:hover {
-    background-color: #424242;
+    background-color: #AD64FF;
     cursor:pointer;
 }
 
@@ -47,7 +57,7 @@ body {
     flex-wrap: wrap;
     align-items:center;
     justify-content:center;
-    background-color:#222222;
+    background-color:#111111;
 }
 
 #welcome-text {
@@ -121,7 +131,7 @@ body {
 }
 
 #content-container {
-    background-color:#222222;
+    background-color:#111111;
     height:100%;
     display:flex;
     flex-direction:column;
