@@ -18,7 +18,7 @@ body {
     color:white;
     background-color:#333333;
     font-size:14px;
-    border-radius:5px;
+    border-radius:3px;
     border:1px solid white;
 }
 
@@ -124,7 +124,7 @@ body {
 #color-picker {
     width: 30px;
     height: 30px;
-    border-radius:2px;
+    border-radius:3px;
 }
 
 #color-picker:hover {
@@ -154,7 +154,8 @@ body {
 #grid-dimensions {
     border:1px solid white;
     padding:5px;
-    border-radius:5px;
+    font-size:14px;
+    border-radius:3px;
     background-color:black;
     width:20px;
     text-align:center;
